@@ -1,11 +1,12 @@
 {
   "scripts": {
     "clean": "rimraf dist/",
-    "copy-files": "copyfiles -u 1 'src/**/**.less' dist/",
-    "build": "yarn clean && tsc && yarn copy-files"
+    "cpf": "cp -r src/ dist/",
+    "tsc": "tsc",
+    "cleants": "rimraf `find ./dist -name '*.ts' -type f -print`",
+    "cleantsx": "rimraf `find ./dist -name '*.tsx' -type f -print`"
   },
   "devDependencies": {
-    "copyfiles": "^2.4.1",
     "rimraf": "^3.0.2"
   }
 }
